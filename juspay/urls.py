@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from payments.views import payment
 
 urlpatterns = [
+	url(r'^$', payment),
     url(r'^admin/', admin.site.urls),
 ]
